@@ -1,0 +1,42 @@
+@import "@ckeditor/ckeditor5-ui/theme/mixins/_rwd.css";
+
+.ck.ck-custom-table-form {
+	/* display: flex; */
+	flex-direction: column;
+	align-items: flex-start;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	padding: 8px;
+
+	& .ck-labeled-field-view {
+		display: inline-block;
+	}
+
+	& .ck-label {
+		display: none;
+	}
+
+	@mixin ck-media-phone {
+		flex-wrap: wrap;
+
+		& .ck-labeled-field-view {
+			flex-basis: 100%;
+		}
+
+		& .ck-button {
+			flex-basis: 50%;
+		}
+	}
+}
+
+.ck.ck-labeled-field-view>.ck.ck-label {
+    width: 100%;
+    text-overflow: ellipsis;
+	overflow: hidden;
+	display: block;
+}
+
+.ck.ck-custom-table-form .ck-labeled-field-view {
+    display: block !important;
+    padding: 1px;
+}
